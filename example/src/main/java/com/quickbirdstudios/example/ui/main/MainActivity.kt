@@ -51,115 +51,62 @@ class MainActivity : AppCompatActivity() {
     private fun setupSurvey(surveyView: SurveyView) {
         val steps = listOf(
             InstructionStep(
-                title = this.resources.getString(R.string.intro_title),
-                text = this.resources.getString(R.string.intro_text),
-                buttonText = this.resources.getString(R.string.intro_start)
+                title = "Hello Participant 00",
+                text = "Thanks for Participating! \n Please fill out my little survey!",
+                buttonText = "start"
             ),
             QuestionStep(
-                title = this.resources.getString(R.string.about_you_question_title),
-                text = this.resources.getString(R.string.about_you_question_text),
+                title = "Current Area",
+                text = "Where are you currently as of this notification \n " +
+                        "Ex:Home,Work,School,Gym,or \n" +
+                        "Private if you would not like to say",
                 answerFormat = AnswerFormat.TextAnswerFormat(maxLines = 5)
             ),
             QuestionStep(
-                title = this.resources.getString(R.string.how_old_title),
-                text = this.resources.getString(R.string.how_old_text),
-                answerFormat = AnswerFormat.IntegerAnswerFormat(
-                    defaultValue = 25,
-                    hint = this.resources.getString(R.string.how_old_hint)
-                )
-            ),
-            QuestionStep(
-                title = this.resources.getString(R.string.how_fat_question_title),
-                text = this.resources.getString(R.string.how_fat_question_text),
+                title ="Rreception",
+                text = "How Unpleasant was reception of this notification(1-not,7-Very Unpleasant)",
                 answerFormat = AnswerFormat.ScaleAnswerFormat(
                     minimumValue = 1,
-                    maximumValue = 5,
+                    maximumValue = 7,
                     minimumValueDescription = this.resources.getString(R.string.how_fat_min),
                     maximumValueDescription = this.resources.getString(R.string.how_fat_max),
                     step = 1f,
-                    defaultValue = 3
+                    defaultValue = 4
                 )
             ),
             QuestionStep(
-                title = this.resources.getString(R.string.allergies_question_title),
-                text = this.resources.getString(R.string.allergies_question_text),
-                answerFormat = AnswerFormat.MultipleChoiceAnswerFormat(
-                    textChoices = listOf(
-                        TextChoice(this.resources.getString(R.string.allergies_back_penicillin)),
-                        TextChoice(this.resources.getString(R.string.allergies_latex)),
-                        TextChoice(this.resources.getString(R.string.allergies_pet)),
-                        TextChoice(this.resources.getString(R.string.allergies_pollen))
-                    )
+                title ="Interrupted",
+                text = "How interruptive was this notification(1-not,7-Very interruptive)",
+                answerFormat = AnswerFormat.ScaleAnswerFormat(
+                    minimumValue = 1,
+                    maximumValue = 7,
+                    minimumValueDescription = this.resources.getString(R.string.how_fat_min),
+                    maximumValueDescription = this.resources.getString(R.string.how_fat_max),
+                    step = 1f,
+                    defaultValue = 4
                 )
             ),
             QuestionStep(
-                title = this.resources.getString(R.string.quit_or_continue_question_title),
-                text = this.resources.getString(R.string.quit_or_continue_question_text),
-                answerFormat = AnswerFormat.SingleChoiceAnswerFormat(
-                    textChoices = listOf(
-                        TextChoice(this.resources.getString(R.string.yes)),
-                        TextChoice(this.resources.getString(R.string.no))
-                    )
+                title = "Location Activity",
+                text = "What Activity were you doing \n before this notification \n ex:Programming,Homework,School Work",
+                answerFormat = AnswerFormat.TextAnswerFormat(maxLines = 5)
+            ),
+            QuestionStep(
+                title ="Activity Engagement",
+                text = "How interruptive was this notification to that Activity(1-not,7-Very interruptive)",
+                answerFormat = AnswerFormat.ScaleAnswerFormat(
+                    minimumValue = 1,
+                    maximumValue = 7,
+                    minimumValueDescription = this.resources.getString(R.string.how_fat_min),
+                    maximumValueDescription = this.resources.getString(R.string.how_fat_max),
+                    step = 1f,
+                    defaultValue = 4
                 )
             ),
-            CustomStep(),
-            QuestionStep(
-                title = this.resources.getString(R.string.boolean_example_title),
-                text = this.resources.getString(R.string.boolean_example_text),
-                answerFormat = AnswerFormat.BooleanAnswerFormat(
-                    positiveAnswerText = this.resources.getString(R.string.how_fat_min),
-                    negativeAnswerText = this.resources.getString(R.string.how_fat_max),
-                    defaultValue = AnswerFormat.BooleanAnswerFormat.Result.NegativeAnswer
-                )
-            ),
-            QuestionStep(
-                title = this.resources.getString(R.string.value_picker_example_title),
-                text = this.resources.getString(R.string.value_picker_example_text),
-                answerFormat = AnswerFormat.ValuePickerAnswerFormat(
-                    choices = (0..10).toList().map { it.toString() },
-                    defaultValue = 5.toString()
-                )
-            ),
-            QuestionStep(
-                title = this.resources.getString(R.string.date_picker_title),
-                text = this.resources.getString(R.string.date_picker_text),
-                answerFormat = AnswerFormat.DateAnswerFormat()
-            ),
-            QuestionStep(
-                title = this.resources.getString(R.string.time_picker_title),
-                text = this.resources.getString(R.string.time_picker_text),
-                answerFormat = AnswerFormat.TimeAnswerFormat()
-            ),
-            QuestionStep(
-                title = this.resources.getString(R.string.email_question_title),
-                text = this.resources.getString(R.string.email_question_text),
-                answerFormat = AnswerFormat.EmailAnswerFormat()
-            ),
-            QuestionStep(
-                title = this.resources.getString(R.string.image_selector_question_title),
-                text = this.resources.getString(R.string.image_selector_question_text),
-                answerFormat = AnswerFormat.ImageSelectorFormat(
-                    numberOfColumns = 5,
-                    defaultSelectedImagesIndices = listOf(1, 3),
-                    imageChoiceList = listOf(
-                        ImageChoice(R.drawable.color1),
-                        ImageChoice(R.drawable.color2),
-                        ImageChoice(R.drawable.color3),
-                        ImageChoice(R.drawable.color4),
-                        ImageChoice(R.drawable.color5),
-                        ImageChoice(R.drawable.color6)
-                    )
-                )
-            ),
-            QuestionStep(
-                title = getString(R.string.date_time_question_title),
-                text = getString(R.string.date_time_question_text),
-                answerFormat = AnswerFormat.DateTimeAnswerFormat()
-            ),
-            QuestionStep(
-                title = this.resources.getString(R.string.location_select_title),
-                text = this.resources.getString(R.string.location_question_text),
-                answerFormat = AnswerFormat.LocationAnswerFormat(lifecycle)
+            InstructionStep(
+                title = "Location",
+                text = "",
+                buttonText = "start"
             ),
             CompletionStep(
                 title = this.resources.getString(R.string.finish_question_title),

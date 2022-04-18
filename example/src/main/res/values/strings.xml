@@ -48,7 +48,7 @@
     <string name="date_time_question_title">DateTime Question</string>
     <string name="date_time_question_text">Choose a date and time</string>
     <string name="message">Are you sure you want to quit the survey?</string>
-    <string name="title">SurveyKit</string>
+    <string name="title">Tris Notifcations Survey</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
     <string name="location_select_title">Select your home address</string>
