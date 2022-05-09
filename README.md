@@ -1,7 +1,9 @@
-CS464 Project For HCI, Made by Tri Nguyen <br/>
-Largely based on the Survey Kit Example and Kotlin Android Develoment starter<br/>
-As well as the pusher examples<br/>
-To start the Project:<br/>
-Download the repo into android studio<br/>
-Run the application in android studio<br/>
-Youtube video: https://youtu.be/hUNdvva8hXM
+CS464 Project For HCI, Made by Tri Nguyen br
+Largely based on the Survey Kit Example and Kotlin Android Develoment starterbr
+As well as the pusher examplesbr
+To start the Projectbr
+Download the repo into android studiobr
+Run the application in android studiobr
+Youtube video httpsyoutu.behUNdvva8hXM
+Github: https://github.com/csu-hci-projects/Location-Based-Notification
+Link to the google Form I used: https://docs.google.com/forms/d/e/1FAIpQLSeay9I_j5N38i04AJmjCguScwh1CL4hFs6vMgHAxiryM5n4Dw/viewform
