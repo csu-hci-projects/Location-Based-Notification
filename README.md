@@ -4,3 +4,4 @@ As well as the pusher examples<br/>
 To start the Project:<br/>
 Download the repo into android studio<br/>
 Run the application in android studio<br/>
+Youtube video: https://youtu.be/hUNdvva8hXM
